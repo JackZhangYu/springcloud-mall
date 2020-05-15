@@ -1,0 +1,41 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: cloud-user-center
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/cloudmall?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 5
+      min-idle: 5
+      max-active: 50
+      max-wait: 60000
+      remove-abandoned: true
+      time-between-eviction-runs-millis: 60000
+      log-abandoned: true
+      max-pool-prepared-statement-per-connection-size: 100
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.mall.client.model
+  configuration:
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    map-underscore-to-camel-case: true
+#配置elastic search的连接
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+#mybatis分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+

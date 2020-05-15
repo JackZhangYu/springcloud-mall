@@ -1,0 +1,41 @@
+server:
+  port: 8601
+
+spring:
+  application:
+    name: cloud-eureka-zuul
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq:
+    addresses: amqp://localhost:5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+  instance:
+    instance-id: Zuul路由服务-7709
+zuul:
+  routes:
+    service-user:
+      path: /user/**
+      serviceId: cloud-user-service
+      stripPrefix: false
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+  ignored-patterns: /**/admin/**
+ribbon:
+  eureka:
+    enabled: false
+
+cloud-user-service:
+  ribbon:
+    listOfServers: chengmall.com,yumall.com

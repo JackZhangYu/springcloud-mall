@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.oauth2service.dao.UserInfoDao">
+  <resultMap id="BaseResultMap" type="com.mall.oauth2service.model.UserInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="createdate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="hobby" jdbcType="VARCHAR" property="hobby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, `password`, address, company, createdate, hobby
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    id,username,password,address,company,createdate
+    from userinfo
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from userinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.mall.oauth2service.model.UserInfo" useGeneratedKeys="true">
+    insert into userinfo (username, `password`, address, 
+      company, createdate,
+      hobby)
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{company,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP},
+      #{hobby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.mall.oauth2service.model.UserInfo" useGeneratedKeys="true">
+    insert into userinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        `password`,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="company != null">
+        company,
+      </if>
+      <if test="createDate != null">
+        createdate,
+      </if>
+      <if test="hobby != null">
+        hobby,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hobby != null">
+        #{hobby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mall.oauth2service.model.UserInfo">
+    update userinfo
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        `password` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null">
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        createdate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hobby != null">
+        hobby = #{hobby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mall.oauth2service.model.UserInfo">
+    update userinfo
+    set username = #{username,jdbcType=VARCHAR},
+      `password` = #{password,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      company = #{company,jdbcType=VARCHAR},
+      createdate = #{createDate,jdbcType=TIMESTAMP},
+      hobby = #{hobby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

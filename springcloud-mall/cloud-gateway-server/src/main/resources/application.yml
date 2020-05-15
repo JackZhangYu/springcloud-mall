@@ -1,0 +1,47 @@
+server:
+  port: 8807
+#// 执行超时时间为1秒，会对下面路由order_route绑定的HystrixGatewayFilterFactory生效
+hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 2000
+
+spring:
+  application:
+    name: cloud-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true     #开通通过服务中心serviceid创建路由的功能
+      routes:
+      - id: cloud-user-service
+        uri: lb://cloud-user-service
+        predicates:
+        - Path=/api/**
+        filters:
+          - StripPrefix=1
+          - name: Hystrix
+            args:
+              name: HystrixCommand
+              fallbackUri: forward:/fallback
+      - id: cloud-eureka-client2
+        uri: http://localhost:8101
+        predicates:
+          - Path=/fallback
+      - id: cloud-es-userinfo
+        uri: lb://cloud-user-center
+        predicates:
+          - Path=/es-user/**
+        filters:
+          - StripPrefix=1
+          - name: Hystrix
+            args:
+              name: fallbackCommand
+              fallbackUri: forward:/fallback
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+

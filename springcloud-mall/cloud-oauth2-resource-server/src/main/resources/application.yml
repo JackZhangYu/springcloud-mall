@@ -1,0 +1,21 @@
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+
+server:
+  port: 8808
+spring:
+  application:
+    name: cloud-oauth2-resource-server
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: cjs

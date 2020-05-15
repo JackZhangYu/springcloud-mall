@@ -1,0 +1,25 @@
+server:
+  port: 9501
+  servlet:
+    context-path: /memberSystem      #不加context-path会导致出现session问题
+spring:
+  application:
+    name: cloud-oauth2-client
+
+security:
+  oauth2:
+    client:
+      client-id: UserManagement
+      client-secret: user123
+      user-authorization-uri: http://localhost:8806/oauth/authorize
+      access-token-uri: http://localhost:8806/oauth/token
+    resource:
+      jwt:
+        key-uri:  http://localhost:8806/oauth/token_key
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

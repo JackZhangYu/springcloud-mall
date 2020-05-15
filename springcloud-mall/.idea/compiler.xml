@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-apollo-config-client" />
+        <module name="cloud-hystrix-service" />
+        <module name="cloud-eureka-zuul" />
+        <module name="cloud-sso-auth-server" />
+        <module name="cloud-admin-server" />
+        <module name="cloud-user-service" />
+        <module name="cloud-gateway-server" />
+        <module name="cloud-mall-fegin" />
+        <module name="cloud-eureka-client" />
+        <module name="cloud-eureka-client2" />
+        <module name="cloud-oauth2-client" />
+        <module name="cloud-oauth2-resource-server" />
+        <module name="cloud-oauth2-service" />
+        <module name="cloud-zipkin-server" />
+        <module name="cloud-admin-client" />
+        <module name="cloud-ribbon-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="cloud-eureka-server" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-admin-client" options="-parameters" />
+      <module name="cloud-admin-server" options="-parameters" />
+      <module name="cloud-apollo-config-client" options="-parameters" />
+      <module name="cloud-eureka-client" options="-parameters" />
+      <module name="cloud-eureka-client2" options="-parameters" />
+      <module name="cloud-eureka-server" options="-parameters" />
+      <module name="cloud-eureka-zuul" options="-parameters" />
+      <module name="cloud-gateway-server" options="-parameters" />
+      <module name="cloud-hystrix-service" options="-parameters" />
+      <module name="cloud-mall-fegin" options="-parameters" />
+      <module name="cloud-oauth2-client" options="-parameters" />
+      <module name="cloud-oauth2-resource-server" options="-parameters" />
+      <module name="cloud-oauth2-service" options="-parameters" />
+      <module name="cloud-ribbon-service" options="-parameters" />
+      <module name="cloud-sso-auth-server" options="-parameters" />
+      <module name="cloud-user-service" options="-parameters" />
+      <module name="cloud-zipkin-server" options="-parameters" />
+    </option>
+  </component>
+</project>

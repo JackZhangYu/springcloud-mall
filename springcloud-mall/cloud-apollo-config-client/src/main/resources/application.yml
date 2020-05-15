@@ -1,0 +1,27 @@
+server:
+  port: 8801
+spring:
+  redis:
+    port: 6601
+  application:
+    name: cloud-apollo-config-client
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+
+env: dev
+
+apollo:
+  bootstrap:
+    enabled: true
+  meta: http://localhost:8080
+  namespace: application
+
+app:
+  id: 20200428
+

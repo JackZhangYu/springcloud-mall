@@ -1,0 +1,30 @@
+server:
+  port: 8205
+
+spring:
+  application:
+    name: cloud-admin-server
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

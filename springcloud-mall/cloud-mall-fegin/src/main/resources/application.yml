@@ -1,0 +1,55 @@
+server:
+  port: 8501
+
+spring:
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  application:
+    name: cloud-mall-feign
+#  zipkin:
+#    base-url: http://localhost:9411/
+  rabbitmq:
+    username: cheng
+    password: 123456
+    host: localhost
+    port: 5672
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+ribbon:
+  connectTimeout: 500
+  ReadTimeout: 2000
+
+cloud-eureka-service:
+  ribbon:
+    MaxAutoRetries: 2
+
+hystrix:
+  command:
+    default:
+      execuation:
+        isolation:
+          thread:
+            timeoutinMilliseconds: 5000
+    getUser:
+      execution:
+        isolation:
+          thread:
+            timeoutinMilliseconds: 5000
+feign:
+  compression:
+    response:
+      enabled: true
+    request:
+      min-request-size: 2048
+      mime-types: {"text/xml", "application/xml", "application/json"}
+      enabled: true
+

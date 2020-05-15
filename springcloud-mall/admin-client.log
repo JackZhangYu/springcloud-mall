@@ -1,0 +1,181 @@
+2020-05-05 09:58:06.709  INFO 6336 --- [main] c.m.a.CloudAdminClientApplication        : No active profile set, falling back to default profiles: default
+2020-05-05 09:58:08.172  WARN 6336 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-05 09:58:08.406  INFO 6336 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=80e5c5a0-7505-3d67-87fe-eee997100780
+2020-05-05 09:58:08.631  INFO 6336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 09:58:09.092  INFO 6336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8305 (http)
+2020-05-05 09:58:09.112  INFO 6336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-05 09:58:09.113  INFO 6336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-05 09:58:09.465  INFO 6336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-05 09:58:09.466  INFO 6336 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2709 ms
+2020-05-05 09:58:09.599  WARN 6336 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 09:58:09.600  INFO 6336 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 09:58:09.616  INFO 6336 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7698b7a4
+2020-05-05 09:58:11.002  INFO 6336 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-05-05 09:58:11.067  WARN 6336 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 09:58:11.067  INFO 6336 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 09:58:11.403  INFO 6336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-05 09:58:13.720  WARN 6336 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-05 09:58:13.775  WARN 6336 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-05-05 09:58:13.792  INFO 6336 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-05-05 09:58:13.967  INFO 6336 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-05 09:58:14.037  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-05 09:58:14.345  INFO 6336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-05 09:58:14.354  INFO 6336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-05 09:58:14.689  INFO 6336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-05 09:58:14.690  INFO 6336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-05 09:58:15.041  INFO 6336 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 09:58:15.648  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-05 09:58:15.649  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-05 09:58:15.649  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-05 09:58:15.649  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-05 09:58:15.649  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-05 09:58:15.649  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-05 09:58:15.650  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-05 09:58:15.992  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-05 09:58:15.997  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-05 09:58:16.001  INFO 6336 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-05 09:58:16.008  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588643896006 with initial instances count: 2
+2020-05-05 09:58:16.010  INFO 6336 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CLOUD-ADMIN-CLIENT with eureka with status UP
+2020-05-05 09:58:16.011  INFO 6336 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588643896011, current=UP, previous=STARTING]
+2020-05-05 09:58:16.019  INFO 6336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305: registering service...
+2020-05-05 09:58:16.079  INFO 6336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305 - registration status: 204
+2020-05-05 09:58:16.100  INFO 6336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8305 (http) with context path ''
+2020-05-05 09:58:16.101  INFO 6336 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8305
+2020-05-05 09:58:16.964  INFO 6336 --- [main] c.m.a.CloudAdminClientApplication        : Started CloudAdminClientApplication in 14.019 seconds (JVM running for 16.449)
+2020-05-05 09:58:18.204  INFO 6336 --- [RMI TCP Connection(5)-192.168.9.47] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-05 09:58:18.205  INFO 6336 --- [RMI TCP Connection(5)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-05 09:58:18.221  INFO 6336 --- [RMI TCP Connection(5)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-05 10:02:19.390  INFO 6336 --- [http-nio-8305-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2020-05-05 10:03:15.658  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:08:15.660  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:13:15.662  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:18:15.663  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:23:15.665  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:28:15.666  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:33:15.668  INFO 6336 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:37:49.171  INFO 15948 --- [main] c.m.a.CloudAdminClientApplication        : No active profile set, falling back to default profiles: default
+2020-05-05 10:37:50.730  WARN 15948 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-05 10:37:51.008  INFO 15948 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ad08802b-7666-3199-9b58-d9be4ae8ae53
+2020-05-05 10:37:51.218  INFO 15948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 10:37:51.220  INFO 15948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 10:37:51.223  INFO 15948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 10:37:51.225  INFO 15948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 10:37:51.710  INFO 15948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8305 (http)
+2020-05-05 10:37:51.741  INFO 15948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-05 10:37:51.742  INFO 15948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-05 10:37:52.088  INFO 15948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-05 10:37:52.088  INFO 15948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2891 ms
+2020-05-05 10:37:52.224  WARN 15948 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 10:37:52.224  INFO 15948 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 10:37:52.241  INFO 15948 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@796d33eb
+2020-05-05 10:37:54.505  INFO 15948 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-05-05 10:37:54.558  WARN 15948 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 10:37:54.559  INFO 15948 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 10:37:54.853  INFO 15948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-05 10:37:59.018  WARN 15948 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-05 10:37:59.048  WARN 15948 --- [main] eactorLoadBalancerClientRibbonWarnLogger : You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-05 10:37:59.097  WARN 15948 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-05-05 10:37:59.118  INFO 15948 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-05-05 10:37:59.264  INFO 15948 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-05 10:37:59.348  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-05 10:37:59.690  INFO 15948 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-05 10:37:59.690  INFO 15948 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-05 10:38:00.080  INFO 15948 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-05 10:38:00.081  INFO 15948 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-05 10:38:00.451  INFO 15948 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:38:01.072  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-05 10:38:01.072  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-05 10:38:01.073  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-05 10:38:01.073  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-05 10:38:01.073  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-05 10:38:01.073  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-05 10:38:01.074  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-05 10:38:01.440  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-05 10:38:01.446  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-05 10:38:01.451  INFO 15948 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-05 10:38:01.460  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588646281458 with initial instances count: 2
+2020-05-05 10:38:01.462  INFO 15948 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CLOUD-ADMIN-CLIENT with eureka with status UP
+2020-05-05 10:38:01.464  INFO 15948 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588646281463, current=UP, previous=STARTING]
+2020-05-05 10:38:01.469  INFO 15948 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305: registering service...
+2020-05-05 10:38:01.527  INFO 15948 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305 - registration status: 204
+2020-05-05 10:38:01.544  INFO 15948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8305 (http) with context path ''
+2020-05-05 10:38:01.545  INFO 15948 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8305
+2020-05-05 10:38:03.415  INFO 15948 --- [main] c.m.a.CloudAdminClientApplication        : Started CloudAdminClientApplication in 18.012 seconds (JVM running for 20.61)
+2020-05-05 10:38:05.193  INFO 15948 --- [RMI TCP Connection(3)-192.168.9.47] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-05 10:38:05.194  INFO 15948 --- [RMI TCP Connection(3)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-05 10:38:05.209  INFO 15948 --- [RMI TCP Connection(3)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-05-05 10:41:01.393  INFO 15948 --- [http-nio-8305-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2020-05-05 10:43:01.090  INFO 15948 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:48:01.091  INFO 15948 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:53:01.093  INFO 15948 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 10:58:01.096  INFO 15948 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:00:52.553  INFO 1808 --- [main] c.m.a.CloudAdminClientApplication        : No active profile set, falling back to default profiles: default
+2020-05-05 11:00:54.134  WARN 1808 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-05 11:00:54.370  INFO 1808 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ad08802b-7666-3199-9b58-d9be4ae8ae53
+2020-05-05 11:00:54.599  INFO 1808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 11:00:54.603  INFO 1808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 11:00:54.606  INFO 1808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 11:00:54.609  INFO 1808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 11:00:55.110  INFO 1808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8305 (http)
+2020-05-05 11:00:55.129  INFO 1808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-05 11:00:55.129  INFO 1808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-05 11:00:55.499  INFO 1808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-05 11:00:55.499  INFO 1808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2911 ms
+2020-05-05 11:00:55.641  WARN 1808 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 11:00:55.642  INFO 1808 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 11:00:55.675  INFO 1808 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@401c4250
+2020-05-05 11:00:58.048  INFO 1808 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-05-05 11:00:58.103  WARN 1808 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-05 11:00:58.104  INFO 1808 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-05 11:00:58.352  INFO 1808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-05 11:01:02.209  WARN 1808 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-05 11:01:02.231  WARN 1808 --- [main] eactorLoadBalancerClientRibbonWarnLogger : You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-05 11:01:02.288  WARN 1808 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-05-05 11:01:02.310  INFO 1808 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-05-05 11:01:02.459  INFO 1808 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-05 11:01:02.548  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-05 11:01:02.913  INFO 1808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-05 11:01:02.913  INFO 1808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-05 11:01:03.319  INFO 1808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-05 11:01:03.320  INFO 1808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-05 11:01:03.641  INFO 1808 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:01:04.254  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-05 11:01:04.254  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-05 11:01:04.255  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-05 11:01:04.255  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-05 11:01:04.256  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-05 11:01:04.256  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-05 11:01:04.256  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-05 11:01:04.598  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-05 11:01:04.607  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-05 11:01:04.614  INFO 1808 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-05 11:01:04.627  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588647664623 with initial instances count: 3
+2020-05-05 11:01:04.630  INFO 1808 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CLOUD-ADMIN-CLIENT with eureka with status UP
+2020-05-05 11:01:04.631  INFO 1808 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588647664631, current=UP, previous=STARTING]
+2020-05-05 11:01:04.638  INFO 1808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305: registering service...
+2020-05-05 11:01:04.713  INFO 1808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLOUD-ADMIN-CLIENT/cheng-comp:cloud-admin-client:8305 - registration status: 204
+2020-05-05 11:01:04.730  INFO 1808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8305 (http) with context path ''
+2020-05-05 11:01:04.732  INFO 1808 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8305
+2020-05-05 11:01:06.457  INFO 1808 --- [main] c.m.a.CloudAdminClientApplication        : Started CloudAdminClientApplication in 17.92 seconds (JVM running for 20.557)
+2020-05-05 11:01:07.690  INFO 1808 --- [RMI TCP Connection(2)-192.168.9.47] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-05 11:01:07.691  INFO 1808 --- [RMI TCP Connection(2)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-05 11:01:07.707  INFO 1808 --- [RMI TCP Connection(2)-192.168.9.47] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-05-05 11:06:04.262  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:11:04.264  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:16:04.269  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:21:04.272  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:26:04.276  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:31:04.280  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:36:04.282  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:41:04.285  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:46:04.286  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:51:04.288  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 11:56:04.289  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:01:04.291  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:06:04.293  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:11:04.296  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:16:04.298  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:19:54.151  INFO 1808 --- [http-nio-8305-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2020-05-05 12:21:04.300  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:26:04.302  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-05 12:31:04.305  INFO 1808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

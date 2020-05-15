@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-client2/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-ribbon-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-hystrix-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-mall-fegin/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-apollo-config-client/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-zipkin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-oauth2-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-oauth2-client/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-sso-auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-oauth2-resource-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-gateway-server/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

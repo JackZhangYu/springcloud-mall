@@ -1,0 +1,50 @@
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+server:
+  port: 8806
+
+spring:
+  thymeleaf:
+    encoding: utf-8
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: cloud-ssoauth-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudmall?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    druid:
+      filters: stat,wall,slf4j
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      pool-prepared-statements: true
+      validation-query: select 'x'
+      max-wait: 60000
+  jpa:
+    database: mysql
+    database-platform: mysql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate-format_sql: true
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        event:
+          merge:
+            entity_copy_observer: allow
+    show-sql: true

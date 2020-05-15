@@ -1,0 +1,27 @@
+server:
+  port: 8201
+
+spring:
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  application:
+    name: cloud-user-service
+#  zipkin:
+#    base-url: http://localhost:9411/
+  rabbitmq:
+    username: cheng
+    password: 123456
+    host: localhost
+    port: 5672
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+
