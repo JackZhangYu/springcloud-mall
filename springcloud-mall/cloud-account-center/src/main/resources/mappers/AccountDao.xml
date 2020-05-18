@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mall.accountcenter.dao.AccountDao" >
+    <resultMap id="BaseResultMap" type="com.mall.accountcenter.entity.Account" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="user_id" property="userId" jdbcType="BIGINT" />
+        <result column="total" property="total" jdbcType="DECIMAL" />
+        <result column="used_money" property="usedMoney" jdbcType="DECIMAL" />
+        <result column="residue" property="residue" jdbcType="DECIMAL" />
+    </resultMap>
+    <update id="decrease">
+         UPDATE account_tbl SET residue = residue - #{money},used_money = used_money + #{money} where user_id = #{userId};
+    </update>
+    <select id="getAccountByUser" resultMap="BaseResultMap">
+        select * from account_tbl where user_id = #{userId}
+    </select>
+</mapper>

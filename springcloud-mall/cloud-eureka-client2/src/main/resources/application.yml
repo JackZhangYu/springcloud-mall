@@ -18,6 +18,10 @@ spring:
       time-between-eviction-runs-millis: 60000
       log-abandoned: true
       max-pool-prepared-statement-per-connection-size: 100
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
 
 mybatis:
   mapper-locations: classpath:mappers/*.xml
@@ -38,4 +42,7 @@ eureka:
 pagehelper:
   helper-dialect: mysql
   reasonable: true
+logging:
+  level:
+    io.seata: debug
 

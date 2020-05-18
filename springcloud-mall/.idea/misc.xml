@@ -26,6 +26,8 @@
         <option value="$PROJECT_DIR$/cloud-sso-auth-server/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-oauth2-resource-server/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-account-center/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-storage-center/pom.xml" />
       </list>
     </option>
   </component>

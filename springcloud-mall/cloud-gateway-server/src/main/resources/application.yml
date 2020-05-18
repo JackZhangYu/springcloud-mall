@@ -4,6 +4,9 @@ server:
 hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 2000
 
 spring:
+  redis:
+    host: localhost
+    port: 6379
   application:
     name: cloud-gateway-service
   cloud:
@@ -36,8 +39,27 @@ spring:
             args:
               name: fallbackCommand
               fallbackUri: forward:/fallback
+      - id: ribbon-goods
+        uri: lb://cloud-ribbon-service
+        order: 0
+        predicates:
+          - Path=/ribbon-goods/**
+        filters:
+          - name: RequestRateLimiter
+            args:
+              key-resolver: '#{@ipKeyResolver}'
+              redis-rate-limiter.replenishRate: 200
+              redis-rate-limiter.burstCapacity: 400
+          - name: Hystrix
+            args:
+              name: fallback
+              fallbackUri: forward:/fallback
+          - StripPrefix=1
 
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
   client:
     register-with-eureka: true
     fetch-registry: true
