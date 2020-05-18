@@ -23,7 +23,6 @@ import javax.sql.DataSource;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient
 @MapperScan("com.mall.client.dao")
-//@Import(DruidConfig.class)
 @EnableFeignClients
 public class CloudEurekaClient2Application {
 
