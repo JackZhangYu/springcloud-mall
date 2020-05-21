@@ -19,4 +19,7 @@ public interface EsUserInfoService {
      */
     public List<EsUserInfo> getUserInfoByMulSearch(String searchWord, int page, int size);
 
-}
+    public List<EsUserInfo> getInfoByPhrase(String keyWord,int page,int size);
+
+
+    }

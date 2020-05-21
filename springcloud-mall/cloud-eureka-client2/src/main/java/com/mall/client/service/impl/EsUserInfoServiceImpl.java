@@ -22,4 +22,9 @@ public class EsUserInfoServiceImpl implements EsUserInfoService {
     public List<EsUserInfo> getUserInfoByMulSearch(String searchWord, int page, int size) {
         return esUserInfoDao.getUserInfoByMulSearch(searchWord,page,size);
     }
+
+    @Override
+    public List<EsUserInfo> getInfoByPhrase(String keyWord, int page, int size) {
+        return esUserInfoDao.getInfoByPhrase(keyWord,page,size);
+    }
 }

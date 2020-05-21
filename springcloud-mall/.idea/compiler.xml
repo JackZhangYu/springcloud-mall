@@ -12,19 +12,19 @@
         <module name="cloud-eureka-zuul" />
         <module name="cloud-sso-auth-server" />
         <module name="cloud-admin-server" />
+        <module name="cloud-user-service" />
         <module name="cloud-gateway-server" />
         <module name="cloud-mall-fegin" />
         <module name="cloud-eureka-client" />
         <module name="cloud-eureka-client2" />
         <module name="cloud-oauth2-client" />
-        <module name="cloud-ribbon-service" />
         <module name="cloud-oauth2-resource-server" />
         <module name="cloud-oauth2-service" />
         <module name="cloud-storage-center" />
         <module name="cloud-account-center" />
         <module name="cloud-admin-client" />
         <module name="cloud-zipkin-server" />
-        <module name="cloud-user-service" />
+        <module name="cloud-ribbon-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">

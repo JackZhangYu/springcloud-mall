@@ -48,7 +48,6 @@ public class EsUserInfoDao {
             SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
             SearchHits hits = response.getHits();
             long num = response.getHits().getTotalHits().value;
-            System.out.println("查询的总条数为:"+ num);
             SearchHit[] searchHits = hits.getHits();
 
             Gson gson = new GsonBuilder()
@@ -64,5 +63,61 @@ public class EsUserInfoDao {
             e.printStackTrace();
         }
         return userInfos;
+    }
+
+    public List<EsUserInfo> getInfoByPhrase(String keyWord,int page,int size){
+        List<EsUserInfo> userInfos = new ArrayList<>();
+        EsUserInfo esUserInfo = new EsUserInfo();
+        SearchRequest request = new SearchRequest("userinfo");
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        sourceBuilder.query(QueryBuilders.matchPhraseQuery("persondetail",keyWord).slop(0));
+        sourceBuilder.from(page);
+        sourceBuilder.size(size);
+        sourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
+        request.source(sourceBuilder);
+        try {
+            EsResult esResult = new EsResult(request).invoke();
+            SearchHit[] searchHits = esResult.getSearchHits();
+            Gson gson = esResult.getGson();
+            for(SearchHit searchHit :searchHits){
+                Map<String,Object> map = searchHit.getSourceAsMap();
+                String object = gson.toJson(map);
+                esUserInfo = gson.fromJson(object,EsUserInfo.class);
+                userInfos.add(esUserInfo);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return userInfos;
+    }
+
+    private class EsResult {
+        private SearchRequest request;
+        private SearchHit[] searchHits;
+        private Gson gson;
+
+        public EsResult(SearchRequest request) {
+            this.request = request;
+        }
+
+        public SearchHit[] getSearchHits() {
+            return searchHits;
+        }
+
+        public Gson getGson() {
+            return gson;
+        }
+
+        public EsResult invoke() throws IOException {
+            SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+            SearchHits hits = response.getHits();
+            long num = response.getHits().getTotalHits().value;
+            searchHits = hits.getHits();
+
+            gson = new GsonBuilder()
+                    .setDateFormat("yyyy-MM-dd hh:mm:ss")
+                    .create();
+            return this;
+        }
     }
 }

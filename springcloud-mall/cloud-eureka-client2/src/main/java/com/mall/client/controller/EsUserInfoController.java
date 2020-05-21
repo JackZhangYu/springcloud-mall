@@ -29,4 +29,12 @@ public class EsUserInfoController {
         List<EsUserInfo> userInfos = esUserInfoService.getUserInfoByMulSearch(word,page,size);
         return new Result<>(userInfos);
     }
+
+    @RequestMapping(value = "/phrase/search",method = RequestMethod.GET)
+    public Result<List<EsUserInfo>> getUserPhraseSea(@RequestParam("keyWord") String keyWord,
+                                                        @RequestParam("page") int page,
+                                                        @RequestParam("size") int size){
+        List<EsUserInfo> userInfos = esUserInfoService.getInfoByPhrase(keyWord,page,size);
+        return new Result<>(userInfos);
+    }
 }
