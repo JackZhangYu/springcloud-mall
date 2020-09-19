@@ -7,51 +7,57 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-apollo-config-client" />
-        <module name="cloud-hystrix-service" />
-        <module name="cloud-eureka-zuul" />
-        <module name="cloud-sso-auth-server" />
-        <module name="cloud-admin-server" />
-        <module name="cloud-gateway-server" />
+        <module name="cloud-nacos-user-consomer" />
         <module name="cloud-mall-fegin" />
-        <module name="cloud-eureka-client" />
-        <module name="cloud-eureka-client2" />
-        <module name="cloud-oauth2-client" />
-        <module name="cloud-ribbon-service" />
-        <module name="cloud-oauth2-resource-server" />
-        <module name="cloud-oauth2-service" />
-        <module name="cloud-storage-center" />
         <module name="cloud-account-center" />
-        <module name="cloud-admin-client" />
-        <module name="cloud-zipkin-server" />
+        <module name="cloud-nasco-config" />
+        <module name="cloud-nasco-center" />
+        <module name="cloud-eureka-client2" />
+        <module name="cloud-ribbon-sentinel-service" />
+        <module name="cloud-oauth2-service" />
+        <module name="cloud-consul-repayment" />
+        <module name="cloud-consul-payment" />
+        <module name="cloud-apollo-config-client" />
         <module name="cloud-user-service" />
+        <module name="cloud-sso-auth-server" />
+        <module name="cloud-oauth2-client" />
+        <module name="cloud-gateway-server" />
+        <module name="cloud-eureka-client" />
+        <module name="cloud-storage-center" />
+        <module name="cloud-eureka-zuul" />
+        <module name="spring-consul-payment" />
+        <module name="cloud-oauth2-resource-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="cloud-eureka-server" target="11" />
+      <module name="cloud-consul-adminclient" target="11" />
+      <module name="cloud-consul-adminserver" target="11" />
+      <module name="spring-consul-payment" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-account-center" options="-parameters" />
-      <module name="cloud-admin-client" options="-parameters" />
-      <module name="cloud-admin-server" options="-parameters" />
       <module name="cloud-apollo-config-client" options="-parameters" />
+      <module name="cloud-consul-adminclient" options="-parameters" />
+      <module name="cloud-consul-adminserver" options="-parameters" />
+      <module name="cloud-consul-payment" options="-parameters" />
+      <module name="cloud-consul-repayment" options="-parameters" />
       <module name="cloud-eureka-client" options="-parameters" />
       <module name="cloud-eureka-client2" options="-parameters" />
-      <module name="cloud-eureka-server" options="-parameters" />
       <module name="cloud-eureka-zuul" options="-parameters" />
       <module name="cloud-gateway-server" options="-parameters" />
-      <module name="cloud-hystrix-service" options="-parameters" />
       <module name="cloud-mall-fegin" options="-parameters" />
+      <module name="cloud-nacos-user-consomer" options="-parameters" />
+      <module name="cloud-nasco-center" options="-parameters" />
+      <module name="cloud-nasco-config" options="-parameters" />
       <module name="cloud-oauth2-client" options="-parameters" />
       <module name="cloud-oauth2-resource-server" options="-parameters" />
       <module name="cloud-oauth2-service" options="-parameters" />
-      <module name="cloud-ribbon-service" options="-parameters" />
+      <module name="cloud-ribbon-sentinel-service" options="-parameters" />
       <module name="cloud-sso-auth-server" options="-parameters" />
       <module name="cloud-storage-center" options="-parameters" />
       <module name="cloud-user-service" options="-parameters" />
-      <module name="cloud-zipkin-server" options="-parameters" />
     </option>
   </component>
 </project>

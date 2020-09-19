@@ -15,55 +15,70 @@ spring:
         locator:
           enabled: true     #开通通过服务中心serviceid创建路由的功能
       routes:
-      - id: cloud-user-service
-        uri: lb://cloud-user-service
-        predicates:
-        - Path=/api/**
-        filters:
-          - StripPrefix=1
-          - name: Hystrix
-            args:
-              name: HystrixCommand
-              fallbackUri: forward:/fallback
-      - id: cloud-eureka-client2
-        uri: http://localhost:8101
-        predicates:
-          - Path=/fallback
-      - id: cloud-es-userinfo
-        uri: lb://cloud-user-center
-        predicates:
-          - Path=/es-user/**
-        filters:
-          - StripPrefix=1
-          - name: Hystrix
-            args:
-              name: fallbackCommand
-              fallbackUri: forward:/fallback
-      - id: ribbon-goods
-        uri: lb://cloud-ribbon-service
-        order: 0
-        predicates:
-          - Path=/ribbon-goods/**
-        filters:
-          - name: RequestRateLimiter
-            args:
-              key-resolver: '#{@ipKeyResolver}'
-              redis-rate-limiter.replenishRate: 200
-              redis-rate-limiter.burstCapacity: 400
-          - name: Hystrix
-            args:
-              name: fallback
-              fallbackUri: forward:/fallback
-          - StripPrefix=1
+        - id: cloud-user-service
+          uri: lb://cloud-user-service
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: HystrixCommand
+                fallbackUri: forward:/fallback
+        - id: cloud-user-center
+          uri: lb://cloud-user-center
+          predicates:
+            - Path=/user-center/**
+            - Method=GET
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: HystrixCommand
+                fallbackUri: forward:/userFallBack
+        - id: cloud-eureka-client2
+          uri: http://localhost:8101
+          predicates:
+            - Path=/fallback
+        - id: cloud-es-userinfo
+          uri: lb://cloud-user-center
+          predicates:
+            - Path=/es-user/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: fallbackCommand
+                fallbackUri: forward:/fallback
+        - id: ribbon-goods
+          uri: lb://cloud-ribbon-service
+          order: 0
+          predicates:
+            - Path=/ribbon-goods/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                key-resolver: '#{@ipKeyResolver}'
+                redis-rate-limiter.replenishRate: 200
+                redis-rate-limiter.burstCapacity: 400
+            - name: Hystrix
+              args:
+                name: fallback
+                fallbackUri: forward:/fallback
+            - StripPrefix=1
+
+  hystrix.command.fallbackCmdA.execution.isolation.thread.timeoutInMilliseconds: 5000
 
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: cloud-gateway-service
+
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka/
-
 

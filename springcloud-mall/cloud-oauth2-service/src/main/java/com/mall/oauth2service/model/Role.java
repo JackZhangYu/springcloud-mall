@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * role
- * @author 
+ * @author cheng
  */
 @Data
 public class Role implements Serializable {

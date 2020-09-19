@@ -14,6 +14,7 @@ public class BeanConfig {
 
     /**
      * 这里设置的是IP地址限流
+     *
      * @return
      */
     @Bean

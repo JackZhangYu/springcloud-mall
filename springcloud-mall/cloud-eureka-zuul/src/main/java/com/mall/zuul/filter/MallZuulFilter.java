@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MallZuulFilter extends ZuulFilter {
 
     Logger logger = LoggerFactory.getLogger(ZuulFilter.class);
+
     @Override
     public String filterType() {
         logger.info("准备进去路由==");
@@ -38,6 +39,7 @@ public class MallZuulFilter extends ZuulFilter {
 
     /**
      * 如果请求头的参数里没有token，就会返回401错误
+     *
      * @return
      * @throws ZuulException
      */
@@ -46,10 +48,10 @@ public class MallZuulFilter extends ZuulFilter {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
         HttpServletResponse response = requestContext.getResponse();
-        response.setHeader("Content-Type","text/html;charset=UTF-8");
+        response.setHeader("Content-Type", "text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         String token = request.getParameter("token");
-        if(StringHelper.isNullOrEmptyString(token)) {
+        if (StringHelper.isNullOrEmptyString(token)) {
             logger.warn("token is null");
             requestContext.setResponseStatusCode(401);
             requestContext.setResponseBody("token为空");

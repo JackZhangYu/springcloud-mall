@@ -2,6 +2,7 @@ package com.mall.client.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,5 +17,10 @@ public class GoodsController {
     @GetMapping("/getUser")
     public String getGoodsInfo(){
         return "返回用户得信息接口";
+    }
+
+    @RequestMapping(value = "/insert/user",method = RequestMethod.POST)
+    public String addUserInfo(){
+        return "调用用户插入接口";
     }
 }

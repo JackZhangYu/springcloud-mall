@@ -38,6 +38,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: cloud-user-center
 #mybatis分页插件配置
 pagehelper:
   helper-dialect: mysql

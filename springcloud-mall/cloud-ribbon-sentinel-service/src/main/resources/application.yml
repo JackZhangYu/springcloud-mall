@@ -1,0 +1,28 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: cloud-ribbon-service
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8084
+
+feign:
+  sentinel:
+    enabled: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+#  instance:
+#    instance-id: cloud-ribbon-service
+#    prefer-ip-address: true
+
+service-url:
+  user-service: http://cloud-user-service
+
+

@@ -19,7 +19,22 @@ public class FallbackController {
 
     @RequestMapping(value = "/fallback")
     @ResponseStatus
-    public Mono<Map<String,Object>> fallback(ServerWebExchange exchange,Throwable throwable){
+    public Mono<Map<String, Object>> fallback(ServerWebExchange exchange, Throwable throwable) {
+        Map<String, Object> result = new HashMap<>(8);
+        ServerHttpRequest request = exchange.getRequest();
+        result.put("path", request.getPath().pathWithinApplication().value());
+        result.put("method", request.getMethodValue());
+        if (null != throwable.getCause()) {
+            result.put("message", throwable.getCause().getMessage());
+        } else {
+            result.put("message", throwable.getMessage());
+        }
+        return Mono.just(result);
+    }
+
+    @RequestMapping(value = "/userFallBack")
+    @ResponseStatus
+    public Mono<Map<String, Object>> userFallBack(ServerWebExchange exchange, Throwable throwable) {
         Map<String, Object> result = new HashMap<>(8);
         ServerHttpRequest request = exchange.getRequest();
         result.put("path", request.getPath().pathWithinApplication().value());

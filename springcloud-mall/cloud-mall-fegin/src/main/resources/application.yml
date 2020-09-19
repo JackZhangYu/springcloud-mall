@@ -43,7 +43,7 @@ eureka:
       defaultZone: http://localhost:8001/eureka/
 
 ribbon:
-  connectTimeout: 500
+  connectTimeout: 2000
   ReadTimeout: 2000
 
 cloud-eureka-service:

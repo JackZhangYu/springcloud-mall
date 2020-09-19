@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mall.userservice.dao.IBrandDao">
+    <resultMap id="BaseResultMap" type="com.mall.userservice.model.BrandModel">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="first_letter" property="firstLetter" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="INTEGER"/>
+        <result column="factory_status" property="factoryStatus" jdbcType="INTEGER"/>
+        <result column="show_status" property="showStatus" jdbcType="INTEGER"/>
+        <result column="product_count" property="productCount" jdbcType="INTEGER"/>
+        <result column="product_comment_count" property="productCommentCount" jdbcType="INTEGER"/>
+        <result column="logo" property="logo" jdbcType="VARCHAR"/>
+        <result column="big_pic" property="bigPic" jdbcType="VARCHAR"/>
+        <result column="brand_story" property="brandStory" jdbcType="VARCHAR" />
+    </resultMap>
+    <insert id="addBrandInfo">
+     INSERT INTO `order` (`id`,`user_id`,`product_id`,`count`,`money`,`status`)
+      VALUES(NULL, #{userId}, #{productId}, #{count}, #{money},0);
+     </insert>
+
+    <delete id="delBrandById">
+
+    </delete>
+    <update id="updateBrandInfo">
+    UPDATE `order` SET money = money - #{money},status = 1
+    where user_id = #{userId} and status = #{status};
+    </update>
+
+    <select id="getBrandById" resultMap="BaseResultMap">
+       SELECT * FROM `pms_brand` WHERE id = #{brandId} limit 1
+    </select>
+    <select id="getAllBrandList" resultMap="BaseResultMap">
+        SELECT * FROM `pms_brand`
+    </select>
+
+</mapper>

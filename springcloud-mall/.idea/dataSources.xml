@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/cloudmall?serverTimezone=GMT</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="mallnew" uuid="75f6dd18-1986-460c-89f4-1b05e50df03d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/mallnew?characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;useSSL=false</jdbc-url>
+    </data-source>
   </component>
 </project>
